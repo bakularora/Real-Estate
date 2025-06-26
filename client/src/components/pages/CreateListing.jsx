@@ -134,7 +134,7 @@ function CreateListing() {
 
       setLoading(true);
       setError(false);
-      const res=await fetch("/api/listing/create-listing",{
+      const res=await fetch("https://real-estate-fcpk.onrender.com/api/listing/create-listing",{
         method:"POST",
         headers:{
           "Content-Type":"application/json",

@@ -59,7 +59,7 @@ function Profile() {
     e.preventDefault();
     try {
       dispatch(updateUserStart());
-      const res=await fetch(`/api/user/update/${currentUser._id}`, 
+      const res=await fetch(`https://real-estate-fcpk.onrender.com/api/user/update/${currentUser._id}`, 
       {
         method:"POST",
         headers:{
@@ -84,7 +84,7 @@ function Profile() {
   const handleDeleteUser = async() => {    
     try {
       dispatch(deleteUserStart());
-      const res=await fetch(`/api/user/delete/${currentUser._id}`,{     
+      const res=await fetch(`https://real-estate-fcpk.onrender.com/api/user/delete/${currentUser._id}`,{     
         method:"DELETE",
       });             
       const data=await res.json();     
@@ -102,7 +102,7 @@ function Profile() {
   const handleSignOut = async() => {
     try {
       dispatch(signOutUserStart());
-      const res=await fetch("/api/auth/sign-out"); 
+      const res=await fetch("https://real-estate-fcpk.onrender.com/api/auth/sign-out"); 
       const data=await res.json();
       if(data.success===false){   
         dispatch(signOutUserFailure(data.message));
@@ -117,7 +117,7 @@ function Profile() {
   const handleShowListings=async()=>{   
     try {
       setShowListingsError(false);
-      const res=await fetch(`/api/user/listing/${currentUser._id}`);  
+      const res=await fetch(`https://real-estate-fcpk.onrender.com/api/user/listing/${currentUser._id}`);  
       const data=await res.json();
       if(data.success===false){   
         setShowListingsError(true);
@@ -131,7 +131,7 @@ function Profile() {
 
   const handleListingDelete=async(id)=>{  
     try {
-      const res=await fetch(`/api/listing/delete-listing/${id}`,{  
+      const res=await fetch(`https://real-estate-fcpk.onrender.com/api/listing/delete-listing/${id}`,{  
         method:"DELETE",
       }); 
       const data=await res.json();

@@ -32,7 +32,7 @@ function Listing() {
     setLoading(true); 
     const fetchListings = async () => {
       try {
-        const res = await fetch(`/api/listing/get-listing/${params.listingId}`); 
+        const res = await fetch(`https://real-estate-fcpk.onrender.com/api/listing/get-listing/${params.listingId}`); 
         const data = await res.json();
         if (data.success === false) {
           setError(true);

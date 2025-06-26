@@ -37,7 +37,7 @@ import {
     useEffect(() => {            
         const getListing=async()=>{
             const listingId=params.listingId;  
-            const res=await fetch(`/api/listing/get-listing/${listingId}`);  
+            const res=await fetch(`https://real-estate-fcpk.onrender.com/api/listing/get-listing/${listingId}`);  
             const data=await res.json();
             if(data.success===false){
                 console.log(data.message);
@@ -150,7 +150,7 @@ import {
   
         setLoading(true);
         setError(false);
-        const res=await fetch(`/api/listing/update-listing/${params.listingId}`,{ 
+        const res=await fetch(`https://real-estate-fcpk.onrender.com/api/listing/update-listing/${params.listingId}`,{ 
           method:"POST",
           headers:{
             "Content-Type":"application/json",

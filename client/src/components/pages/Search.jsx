@@ -44,7 +44,7 @@ function Search() {
         setShowMore(false);
         setLoading(true);
         const searchQuery = urlParams.toString();      
-        const res=await fetch(`/api/listing/get-listings?${searchQuery}`);      
+        const res=await fetch(`https://real-estate-fcpk.onrender.com/api/listing/get-listings?${searchQuery}`);      
         const data=await res.json();      
         if(data.length>8){
             setShowMore(true);
@@ -99,7 +99,7 @@ function Search() {
         const urlParams = new URLSearchParams(location.search); 
         urlParams.set("startIndex", startIndex); 
         const searchQuery = urlParams.toString(); 
-        const res=await fetch(`/api/listing/get-listings?${searchQuery}`);      
+        const res=await fetch(`https://real-estate-fcpk.onrender.com/api/listing/get-listings?${searchQuery}`);      
         const data=await res.json();       
         if(data.length<9){
             setShowMore(false);

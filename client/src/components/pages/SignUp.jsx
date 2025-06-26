@@ -21,7 +21,7 @@ function SignUp() {
     e.preventDefault();  
     try {
       setLoading(true);
-      const res=await fetch("/api/auth/sign-up",{                
+      const res=await fetch("https://real-estate-fcpk.onrender.com/api/auth/sign-up",{                
       method:"POST",
       headers:{
         "Content-Type":"application/json"

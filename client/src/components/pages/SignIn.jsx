@@ -19,7 +19,7 @@ function SignIn() {
     e.preventDefault();  
     try {
       dispatch(signInStart());  
-      const res=await fetch("/api/auth/sign-in",{                
+      const res=await fetch("https://real-estate-fcpk.onrender.com/api/auth/sign-in",{                
       method:"POST",
       headers:{
         "Content-Type":"application/json"

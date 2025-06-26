@@ -14,7 +14,7 @@ function OAuth() {
             const auth=getAuth(app);
             const result=await signInWithPopup(auth,Provider);
             
-            const res=await fetch("/api/auth/sign-in-google",{
+            const res=await fetch("https://real-estate-fcpk.onrender.com/api/auth/sign-in-google",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
