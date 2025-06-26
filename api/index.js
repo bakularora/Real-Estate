@@ -8,6 +8,7 @@ import cookieParser from 'cookie-parser';
 import path from 'path';
 import cors from 'cors';
 dotenv.config();
+const app = express();
 
 
 const corsOptions = {
@@ -30,7 +31,6 @@ mongoose
 
 const __dirname = path.resolve();
 
-const app = express();
 
 app.use(express.json());
 
