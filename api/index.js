@@ -6,7 +6,18 @@ import authRouter from './routes/auth.route.js';
 import listingRouter from './routes/listing.route.js';
 import cookieParser from 'cookie-parser';
 import path from 'path';
+import cors from 'cors';
 dotenv.config();
+
+
+const corsOptions = {
+    origin: process.env.Frontend_Url,
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+};
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
 mongoose
     .connect(process.env.MONGO)
